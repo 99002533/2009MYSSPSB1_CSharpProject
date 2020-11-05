@@ -1,0 +1,69 @@
+﻿@model List<NetflixApp.Models.MyTable>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>Details</title>
+    <style>
+        body {
+            background-color: azure;
+            
+        }
+
+        h1 {
+            font-size: 50pt;
+            text-align: center;
+            color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            @Html.ActionLink("New Registration", "AddNewSeries")
+        </div>
+    </nav>
+    <h1>List of Series</h1>
+    <hr />
+    <div>
+        <table border="2" width="100%" align="center">
+            <tr>
+                <th>ID</th>
+                <th>Generes</th>
+                <th>Title</th>
+                <th>Langauge</th>
+                <th>Starring</th>
+                <th>Released Date</th>
+                <th>Rating</th>
+                <td>Options</td>
+            </tr>
+            @foreach (var srs in Model)
+            {
+                <tr>
+                    <td>@srs.Id</td>
+                    <td>@srs.Generes</td>
+                    <td>@srs.Title</td>
+                    <td>@srs.Language</td>
+                    <td>@srs.Starring</td>
+                    <td>@srs.Released_Date</td>
+                    <td>@srs.Rating</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Update", new { id = srs.Id })
+
+                        @Html.ActionLink("X", "Delete", new { id = srs.Id })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
+
+
+

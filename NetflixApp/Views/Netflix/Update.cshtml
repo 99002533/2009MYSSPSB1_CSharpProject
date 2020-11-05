@@ -1,0 +1,45 @@
+﻿@model NetflixApp.Models.MyTable
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update</title>
+</head>
+<body>
+    <h1>Details of the Series to update</h1>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <p>
+                Enter the ID: @Html.EditorFor((m) => m.Id)
+            </p>
+            <p>
+                Enter the Generes: @Html.EditorFor((m) => m.Generes)
+            </p>
+            <p>
+                Enter the Title: @Html.EditorFor((m) => m.Title)
+            </p>
+            <p>
+                Enter the Langauge: @Html.EditorFor((m) => m.Language)
+            </p>
+            <p>
+                Enter the Starring: @Html.EditorFor((m) => m.Starring)
+            </p>
+            <p>
+                Enter the Released_Date: @Html.EditorFor((m) => m.Released_Date)
+            </p>
+            <p>
+                Enter the Rating(0-5): @Html.EditorFor((m) => m.Rating)
+            </p>
+            <button>Save Changes</button>
+        }
+    </div>
+</body>
+</html>
+
+
