@@ -22,16 +22,26 @@
             </p>
 
             <p>
-                Enter the Generes: @Html.EditorFor((m) => m.Generes)
-
+                Enter the Generes: <select name="Generes" id="gen">
+                    <option value=" ">-------Select Generes-------</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Action">Action</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Thriller">Thriller</option>
+                </select>
             </p>
             <p>
                 Enter the Title: @Html.EditorFor((m) => m.Title)
             </p>
 
             <p>
-                Enter the Language: @Html.EditorFor((m) => m.Language)
-
+                Enter the Language: <select name="Language" id="lang">
+                    <option value=" ">---------Select Language----------</option>
+                    <option value="Kannada">Kannada</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="English">English</option>
+                    <option value="Tamil">Tamil</option>
+                </select>
             </p>
             <p>
                 Enter the Starring: @Html.EditorFor((m) => m.Starring)
