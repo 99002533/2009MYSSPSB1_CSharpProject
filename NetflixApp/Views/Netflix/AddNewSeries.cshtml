@@ -1,0 +1,49 @@
+﻿@model NetflixApp.Models.MyTable
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NewSeries</title>
+</head>
+<body>
+    <h1>Adding New Series List</h1>
+    <hr />
+    <div>
+        @using (Html.BeginForm())
+        {
+            <p>
+                Enter the ID: @Html.EditorFor((m) => m.Id)
+            </p>
+
+            <p>
+                Enter the Generes: @Html.EditorFor((m) => m.Generes)
+
+            </p>
+            <p>
+                Enter the Title: @Html.EditorFor((m) => m.Title)
+            </p>
+
+            <p>
+                Enter the Language: @Html.EditorFor((m) => m.Language)
+
+            </p>
+            <p>
+                Enter the Starring: @Html.EditorFor((m) => m.Starring)
+            </p>
+            <p>
+                Enter the Released_Date: @Html.EditorFor((m) => m.Released_Date)
+            </p>
+            <p>
+                Enter the Rating(0-5): @Html.EditorFor((m) => m.Rating)
+            </p>
+            <button>Add Series</button>
+        }
+    </div>
+</body>
+</html>
