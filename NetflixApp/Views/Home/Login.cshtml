@@ -1,0 +1,56 @@
+﻿@model NetflixApp.Models.LoginModel
+@{
+    ViewBag.Title = "Login";
+}
+<html>
+<head>
+
+</head>
+<body style="background-image: url(../../photo/Background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;">
+   
+<h2 style="color:white">
+    Login
+</h2>
+@using (Html.BeginForm())
+{
+
+    @Html.ValidationSummary(true)
+
+    <div style=" padding: 90px 90px; border-radius: 5px;
+        width: 325px; margin: auto; display: table;">
+        <table>
+            <tr>
+                <td valign="top" style="color:white">
+                    @Html.LabelFor(model => model.Username)
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.Username)
+                    <div style="height: 20px;">
+                        @Html.ValidationMessageFor(model => model.Username)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" style="color:white">
+                @Html.LabelFor(model => model.Password)
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Password)
+                <div style="height: 20px;">
+                    @Html.ValidationMessageFor(model => model.Password)
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <td>
+            <input type="submit" value="Login" onclick="Details()"/>
+        </td>
+    </tr>
+</table>
+</div>
+}
+    </body>
+</html>
